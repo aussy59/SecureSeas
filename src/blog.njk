@@ -21,7 +21,7 @@ permalink: /blog/
             {% for post in postList %}
             <article class="blog-card">
                 <a href="{{ post.url }}">
-                    <div class="blog-card-image" style="background: linear-gradient(135deg, {{ post.data.gradient[0] | default('#0a2463') }}, {{ post.data.gradient[1] | default('#1e6091') }});">
+                    <div class="blog-card-image" style="{% if post.data.cover %}background-image: linear-gradient(rgba(10,36,99,0.3), rgba(10,36,99,0.3)), url('{{ post.data.cover }}'); background-size: cover; background-position: center;{% else %}background: linear-gradient(135deg, {{ post.data.gradient[0] | default('#0a2463') }}, {{ post.data.gradient[1] | default('#1e6091') }});{% endif %}">
                         {% if post.data.tags %}
                             {% for tag in post.data.tags %}
                                 {% if tag != "posts" %}

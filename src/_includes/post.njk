@@ -5,7 +5,7 @@ hideFooterWave: true
 ---
 
 <article class="post">
-    <header class="post-header">
+    <header class="post-header" {% if cover %}style="background: linear-gradient(rgba(10,36,99,0.6), rgba(10,36,99,0.75)), url('{{ cover }}') center/cover;"{% endif %}>
         <div class="container">
             <div class="post-meta">
                 {% if tags %}

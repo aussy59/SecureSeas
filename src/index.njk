@@ -4,7 +4,7 @@ title: Sailing & Cybersecurity
 ---
 
 <!-- Hero Section -->
-<header class="hero">
+<header class="hero hero-photo">
     <div class="hero-bg"></div>
     <div class="container hero-content">
         <h1>Sailing & <span class="highlight">Cybersecurity</span></h1>
@@ -34,7 +34,7 @@ title: Sailing & Cybersecurity
             {% for post in postList | limit(3) %}
             <article class="blog-card">
                 <a href="{{ post.url }}">
-                    <div class="blog-card-image" style="background: linear-gradient(135deg, {{ post.data.gradient[0] | default('#0a2463') }}, {{ post.data.gradient[1] | default('#1e6091') }});">
+                    <div class="blog-card-image" style="{% if post.data.cover %}background-image: linear-gradient(rgba(10,36,99,0.3), rgba(10,36,99,0.3)), url('{{ post.data.cover }}'); background-size: cover; background-position: center;{% else %}background: linear-gradient(135deg, {{ post.data.gradient[0] | default('#0a2463') }}, {{ post.data.gradient[1] | default('#1e6091') }});{% endif %}">
                         {% if post.data.tags %}
                             {% for tag in post.data.tags %}
                                 {% if tag != "posts" %}

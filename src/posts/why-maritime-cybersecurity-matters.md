@@ -5,9 +5,7 @@ tags:
   - posts
   - Cybersecurity
 excerpt: "The maritime industry is increasingly connected — and increasingly vulnerable. Here's what you need to know."
-gradient:
-  - "#0a2463"
-  - "#1e6091"
+cover: "/assets/images/night-sail.jpeg"
 layout: post.njk
 ---
 
