@@ -218,10 +218,10 @@ a {
 }
 
 .hero-photo .hero-bg {
-    background: linear-gradient(rgba(10, 36, 99, 0.55), rgba(10, 36, 99, 0.7)),
+    background: linear-gradient(rgba(10, 36, 99, 0.45), rgba(10, 36, 99, 0.6)),
         url('/assets/images/diamond-head.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: center 70%;
 }
 
 .hero-content {
