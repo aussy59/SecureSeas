@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default(site.name) }} — {{ site.name }}</title>
+    <meta name="description" content="{{ description | default(site.description) }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar{% if navScrolled %} scrolled{% endif %}" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/assets/images/logo.png" alt="SecureSeas Logo" class="logo-img">
+                <span class="logo-text">SecureSeas</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/blog/">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {{ content | safe }}
+
+    <footer class="footer">
+        {% if not hideFooterWave %}
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,0 720,120 1080,60 C1260,30 1380,50 1440,60 L1440,0 L0,0 Z" fill="#ffffff"/>
+            </svg>
+        </div>
+        {% endif %}
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="/assets/images/logo.png" alt="SecureSeas" class="footer-logo">
+                    <p>Sailing & cybersecurity.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="/">Home</a>
+                    <a href="/blog/">Blog</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ 2026 }} SecureSeas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

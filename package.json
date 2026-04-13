@@ -1,0 +1,27 @@
+{
+  "name": "website-ss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve",
+    "convert": "node convert-post.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aussy59/SecureSeas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aussy59/SecureSeas/issues"
+  },
+  "homepage": "https://github.com/aussy59/SecureSeas#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "mammoth": "^1.12.0"
+  }
+}
